@@ -2961,10 +2961,20 @@ button:disabled {
   text-align: center !important;
 }
 
-.nav-pills .nav-link {
+/* .nav-pills .nav-link {
+  width: 475px;
+  text-align: center;
+} */
+.bal {
   width: 475px;
   text-align: center;
 }
+
+.sal {
+  width: 150px;
+  text-align: center;
+}
+
 .appointments-nav {
   width: 90%;
   margin: auto;
@@ -3381,11 +3391,133 @@ p {
   padding: 20px 0;
 }
 
-.d-flex {
+.background3 .d-flex {
   justify-content: space-between !important;
 }
 
 .wallet-img-content {
   width: 80%;
   margin: auto;
+}
+
+/* Glamecode css */
+
+/* Glamecode header */
+.glamecode-head-css {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+  background: #ff9568;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+.glamecode-head-css-logo {
+  display: flex;
+}
+
+.glamecode-head-css-logo-p1 {
+  font-size: 22px;
+  font-weight: 700;
+  padding: 0;
+  margin: 0;
+  font-family: "Alata";
+}
+.glamecode-head-css-logo-p2 {
+  font-size: 16px;
+  font-weight: 500;
+  padding: 0;
+  margin: 0;
+  font-family: "Alata";
+}
+
+.glamecode-head-css-link {
+  display: flex;
+  justify-content: space-around;
+}
+.glamecode-head-css-link-nav {
+  margin-left: 30px;
+  background: #7effe0;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+  border-radius: 2px;
+
+  padding: 3px 8px;
+}
+.glamecode-head-css-link-nav span {
+  color: #000;
+  font-weight: 500;
+}
+
+.glamecode-head2-css {
+  margin-top: 10px;
+  display: flex;
+  padding: 10px 15px;
+}
+.glamecode-head2-input {
+  margin-left: 380px;
+  background: #ffffff;
+  border-radius: 18px;
+
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 10px;
+  padding-right: 2px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.glamecode-head2-input2 {
+  border: none;
+}
+.glamecode-head2-span {
+  margin-left: 5px;
+  background-color: #ff9568;
+  padding: 5px;
+  border-radius: 12px;
+}
+
+.glamecode-bg {
+  background: linear-gradient(
+    71.97deg,
+    #46ffff -2.56%,
+    #f0a066 0.71%,
+    #fffcb2 53.17%,
+    #ff6cf9 106.07%
+  );
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+}
+
+.glamecode-bg-banner {
+  text-align: center;
+  margin-top: 20px;
+  padding-bottom: 20px;
+}
+
+/* Glamecode css for mobile*/
+
+/* Glamecode header */
+
+.glamecode-head2-input-m {
+  background: #ffffff;
+  border-radius: 18px;
+
+  padding-left: 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.glamecode-head2-input-m-w {
+  width: 80%;
+  margin: auto;
+  margin-top: 50px;
+}
+.glamecode-head2-button-head {
+  text-align: center;
+  margin-top: 30px;
+  padding-bottom: 30px;
+}
+
+.glamecode-head2-button {
+  border: #fff;
 }
