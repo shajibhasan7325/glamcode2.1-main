@@ -1,9 +1,9 @@
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch, useSelector } from "react-redux";
 import {
   addtoCartData,
   decrementQty,
   removeFromCart,
-} from '../../store/actions';
+} from "../../store/actions";
 
 export default function AddToCart({ data }) {
   const cart = useSelector((state) => state.cardAdd?.cart);

@@ -461,7 +461,7 @@ button {
   height: 1rem;
 }
 .section-model-login {
-  height: calc(100vh - 5rem);
+  height: calc(100vh - 15rem);
   width: 100%;
   max-width: 32rem;
   overflow: hidden;
@@ -1454,7 +1454,7 @@ a:hover {
 
 .section-model-login .headsecftion {
   width: 100%;
-  height: 30%;
+  height: 35%;
   border-bottom-left-radius: 50%;
   border-bottom-right-radius: 50%;
   background: rgba(255, 250, 207, 0.79);
@@ -1466,7 +1466,7 @@ a:hover {
 .section-model-login .headsecftion .ptext {
   display: block;
   width: 50%;
-  padding-top: 15%;
+  padding-top: 10%;
   margin-left: auto;
   margin-right: auto;
   -webkit-filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
