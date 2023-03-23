@@ -23,9 +23,12 @@ export default function AddToCart({ data }) {
 
   return (
     <>
-      <div className="">
+      <div style={{
+        display:"grid",
+        justifyContent:"center"
+      }}>
         {inCart.length > 0 ? (
-          <div className="mt-0 Addtocart-Items-m Addtocart d-inline-flex gap-xl-3 gap-1">
+          <div className="mt-2 Addtocart-Items-m Addtocart d-inline-flex gap-xl-3 gap-1">
             <div className="addcart-minus" onClick={() => onDecrement(data.id)}>
               -
             </div>

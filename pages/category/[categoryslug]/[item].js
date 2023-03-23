@@ -267,19 +267,11 @@ export default function Categoryslug({ servicesData }) {
                                 hidden={!_isMobile}
                               >
                                 <div className="servicesMD row servicesMD-bg-color-1">
-                                  <a className="col-5 p-0" href="#">
-                                    <img
-                                      className="image"
-                                      src={y.service_image_url}
-                                      alt={y.name}
-                                    />
-                                  </a>
                                   <div className="col-7 position-relative pt-2">
                                     <div className="d-flex align-items-center justify-content-between">
                                       <a href="#" className="service-title">
                                         {y.name}
                                       </a>
-                                      <AddToCart data={y} />
                                     </div>
                                     <div
                                       className="d-flex flex-row align-items-center"
@@ -314,6 +306,14 @@ export default function Categoryslug({ servicesData }) {
                                     </div>
                                     <ViewDetails alldata={y} />
                                   </div>
+                                  <a className="col-5 p-0" href="#">
+                                    <img
+                                      className="image"
+                                      src={y.service_image_url}
+                                      alt={y.name}
+                                    />
+                                    <AddToCart data={y} />
+                                  </a>
                                 </div>
                               </div>
 

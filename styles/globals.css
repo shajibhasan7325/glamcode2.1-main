@@ -2346,7 +2346,11 @@ button:disabled {
 
   #cart-btn .Addtocart,
   .servicesMD .Addtocart {
-    padding: 0 8px;
+    padding: 3px 20px;
+    text-align: center;
+    width: min-content;
+    margin-top: 7px;
+    margin-bottom: 5px;
   }
 
   .servicesMD .viewDetails {
@@ -2360,7 +2364,7 @@ button:disabled {
   }
 
   .servicesMD .image {
-    height: auto;
+    height: 80% !important;
   }
 
   .section-model-login {
@@ -3661,4 +3665,25 @@ p {
 
 .modal-header {
   background-color: #e9dcc0 !important;
+}
+/* customize modal */
+/* customize modal */
+
+.customize-flex {
+  display: flex;
+  justify-content: space-between;
+}
+.form-check-input:checked {
+  background-color: #000 !important;
+  border-color: #fff !important;
+}
+.add-to-card {
+  border: none;
+  padding: 3px 10px;
+  border-radius: 15px;
+  background-color: #a854fc;
+  color: #fff;
+}
+.modal-header {
+  background-color: #fff !important;
 }
