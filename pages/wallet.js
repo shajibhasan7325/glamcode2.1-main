@@ -42,10 +42,11 @@ const Wallet = () => {
               </Nav.Item>
 
               <Nav.Item>
-                <div className="wallet-t bal">
-                  <Nav.Link eventKey="second">
-                    <BsWalletFill size={33} />
-                  </Nav.Link>
+                <div
+                  className="wallet-t bal"
+                  style={{ color: "#fff", fontSize: "22px" }}
+                >
+                  <Nav.Link eventKey="second">Cashback</Nav.Link>
                 </div>
               </Nav.Item>
             </Nav>
@@ -84,10 +85,11 @@ const Wallet = () => {
               </Nav.Item>
 
               <Nav.Item>
-                <div className="wallet-t sal" style={{ color: "#fff" }}>
-                  <Nav.Link eventKey="second">
-                    <BsWalletFill size={33} />
-                  </Nav.Link>
+                <div
+                  className="wallet-t sal"
+                  style={{ color: "#fff", fontSize: "22px" }}
+                >
+                  <Nav.Link eventKey="second">Cashback</Nav.Link>
                 </div>
               </Nav.Item>
             </Nav>

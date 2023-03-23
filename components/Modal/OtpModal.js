@@ -1,14 +1,15 @@
-import React, { Fragment, useState } from 'react';
-import Modal from 'react-bootstrap/Modal';
-import Button from 'react-bootstrap/Button';
+import React, { Fragment, useState } from "react";
+import Modal from "react-bootstrap/Modal";
+import Button from "react-bootstrap/Button";
 
-import { useForm } from 'react-hook-form';
-import { frontService } from '../../_services/front.services';
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-import Router from 'next/router';
-import { useDispatch } from 'react-redux';
-import { userData } from '../../store/actions/index';
+import { useForm } from "react-hook-form";
+import { frontService } from "../../_services/front.services";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import Router from "next/router";
+import { useDispatch } from "react-redux";
+import { userData } from "../../store/actions/index";
+import Link from "next/link";
 
 function OtpModal({ show, handleShow, handleClose }) {
   // const [show, setShow] = useState(false);
@@ -31,8 +32,8 @@ function OtpModal({ show, handleShow, handleClose }) {
     setSending(true);
     frontService.sendOtpcode(data).then(
       (res) => {
-        if (res.status == 'success') {
-          localStorage.setItem('phonenumber', data.phone);
+        if (res.status == "success") {
+          localStorage.setItem("phonenumber", data.phone);
           setMainotp(true);
           reset();
           setDataMb(res.mb);
@@ -46,41 +47,41 @@ function OtpModal({ show, handleShow, handleClose }) {
           //   progress: undefined,
           //   theme: 'light',
           // });
-        } else if (res.status == 'fail') {
+        } else if (res.status == "fail") {
           toast.warning(res.message, {
-            position: 'bottom-center',
+            position: "bottom-center",
             autoClose: 5000,
             hideProgressBar: false,
             closeOnClick: true,
             pauseOnHover: true,
             draggable: true,
             progress: undefined,
-            theme: 'light',
+            theme: "light",
           });
         } else {
-          toast.warning('Invalid', {
-            position: 'bottom-center',
+          toast.warning("Invalid", {
+            position: "bottom-center",
             autoClose: 5000,
             hideProgressBar: false,
             closeOnClick: true,
             pauseOnHover: true,
             draggable: true,
             progress: undefined,
-            theme: 'light',
+            theme: "light",
           });
         }
         setSending(false);
       },
       (error) => {
-        toast.error('Invalid', {
-          position: 'bottom-center',
+        toast.error("Invalid", {
+          position: "bottom-center",
           autoClose: 5000,
           hideProgressBar: false,
           closeOnClick: true,
           pauseOnHover: true,
           draggable: true,
           progress: undefined,
-          theme: 'light',
+          theme: "light",
         });
         setSending(false);
       }
@@ -96,9 +97,9 @@ function OtpModal({ show, handleShow, handleClose }) {
       };
       frontService.sendOtpverify(dat).then(
         (res) => {
-          if (res.status === 'success') {
+          if (res.status === "success") {
             //console.log(res.user);
-            localStorage.setItem('gluserDetails', JSON.stringify(res.user));
+            localStorage.setItem("gluserDetails", JSON.stringify(res.user));
             dispatch(userData(res.user));
             handleClose();
             reset();
@@ -113,58 +114,58 @@ function OtpModal({ show, handleShow, handleClose }) {
             //   theme: 'light',
             // });
 
-            localStorage.getItem('page')
-              ? Router.push('/checkout')
-              : Router.push('/');
-          } else if (res.status === 'fail') {
+            localStorage.getItem("page")
+              ? Router.push("/checkout")
+              : Router.push("/");
+          } else if (res.status === "fail") {
             toast.warning(res.message, {
-              position: 'bottom-center',
+              position: "bottom-center",
               autoClose: 5000,
               hideProgressBar: false,
               closeOnClick: true,
               pauseOnHover: true,
               draggable: true,
               progress: undefined,
-              theme: 'light',
+              theme: "light",
             });
           } else {
-            toast.warning('Invalid', {
-              position: 'bottom-center',
+            toast.warning("Invalid", {
+              position: "bottom-center",
               autoClose: 5000,
               hideProgressBar: false,
               closeOnClick: true,
               pauseOnHover: true,
               draggable: true,
               progress: undefined,
-              theme: 'light',
+              theme: "light",
             });
           }
           setSending(false);
         },
         (error) => {
-          toast.warning('Invalid', {
-            position: 'bottom-center',
+          toast.warning("Invalid", {
+            position: "bottom-center",
             autoClose: 5000,
             hideProgressBar: false,
             closeOnClick: true,
             pauseOnHover: true,
             draggable: true,
             progress: undefined,
-            theme: 'light',
+            theme: "light",
           });
           setSending(false);
         }
       );
     } else {
-      toast.error('Wrong OTP', {
-        position: 'bottom-center',
+      toast.error("Wrong OTP", {
+        position: "bottom-center",
         autoClose: 5000,
         hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: true,
         draggable: true,
         progress: undefined,
-        theme: 'light',
+        theme: "light",
       });
     }
     // frontService.sendOtpverify(data)
@@ -228,7 +229,8 @@ function OtpModal({ show, handleShow, handleClose }) {
 
   return (
     <div className="otpModal">
-      <Modal show={show} onHide={handleClose}>
+      <Modal size="sm" show={show} onHide={handleClose}>
+        <Modal.Header closeButton></Modal.Header>
         <div className="section-login-background">
           <div className="section-model-login">
             <div className="headsecftion">
@@ -246,15 +248,16 @@ function OtpModal({ show, handleShow, handleClose }) {
                     placeholder="Otp"
                     defaultValue=""
                     maxLength={4}
-                    {...register('otp', {
-                      required: 'Otp is Required',
+                    {...register("otp", {
+                      required: "Otp is Required",
                     })}
                     onKeyUp={() => {
-                      trigger('otp');
+                      trigger("otp");
                     }}
                   />
+
                   {errors.otp && (
-                    <span style={{ marginLeft: '58px', color: 'red' }}>
+                    <span style={{ marginLeft: "58px", color: "red" }}>
                       {errors.otp.message}
                     </span>
                   )}
@@ -270,20 +273,20 @@ function OtpModal({ show, handleShow, handleClose }) {
                     maxLength={10}
                     placeholder="Enter the 10 digit mobile"
                     defaultValue=""
-                    {...register('phone', {
-                      required: 'Phone is Required',
+                    {...register("phone", {
+                      required: "Phone is Required",
                       pattern: {
                         value:
                           /^\s*(?:\+?(\d{1,3}))?[-. (]*(\d{3})[-. )]*(\d{3})[-. ]*(\d{4})(?: *x(\d+))?\s*$/,
-                        message: 'Invalid Phone No',
+                        message: "Invalid Phone No",
                       },
                     })}
                     onKeyUp={() => {
-                      trigger('phone');
+                      trigger("phone");
                     }}
                   />
                   {errors.phone && (
-                    <span style={{ marginLeft: '58px', color: 'red' }}>
+                    <span style={{ marginLeft: "58px", color: "red" }}>
                       {errors.phone.message}
                     </span>
                   )}
@@ -291,6 +294,34 @@ function OtpModal({ show, handleShow, handleClose }) {
                   <button className="button" disabled={sending}>
                     Send OTP
                   </button>
+                  <div
+                    style={{
+                      textAlign: "center",
+                      fontSize: "20px",
+                      color: "#fff",
+                    }}
+                  >
+                    <label>
+                      <input
+                        className="hello"
+                        type="checkbox"
+                        width={30}
+                        height={30}
+                      />
+                      <Link href="/terms-conditions">
+                        <span
+                          style={{
+                            fontSize: "16px",
+                            color: "#000",
+                            textDecoration: "underline",
+                            marginLeft: "6px",
+                          }}
+                        >
+                          terms-conditions
+                        </span>
+                      </Link>
+                    </label>
+                  </div>
                 </form>
               )}
             </div>

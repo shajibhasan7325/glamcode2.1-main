@@ -16,7 +16,7 @@ import PreferredPackages from "../components/PreferredPackages";
 import ReferAndEarn from "../components/ReferAndEarn";
 import CustomerTestimonials from "../components/CustomerTestimonials";
 import { isMobile } from "react-device-detect";
-import OtpModal from "../components/Modal/OtpModal";
+import OtpModal from "../components/Modal/Customize";
 import Global from "../_helpers/global";
 import { useDispatch, useSelector } from "react-redux";
 export default function Home({ slider, homeData }) {

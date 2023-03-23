@@ -1454,7 +1454,7 @@ a:hover {
 
 .section-model-login .headsecftion {
   width: 100%;
-  height: 50%;
+  height: 30%;
   border-bottom-left-radius: 50%;
   border-bottom-right-radius: 50%;
   background: rgba(255, 250, 207, 0.79);
@@ -1487,8 +1487,8 @@ a:hover {
 .section-model-login .bottomsecftion .inputField,
 .section-model-login .bottomsecftion .inputFieldAddress {
   display: block;
-  width: 80%;
-  height: 50px;
+  width: 60%;
+  height: 40px;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
@@ -3458,11 +3458,13 @@ p {
   background: #ffffff;
   border-radius: 18px;
 
-  padding-top: 4px;
-  padding-bottom: 4px;
-  padding-left: 10px;
-  padding-right: 2px;
+  padding-left: 30px;
+  width: 500px;
+
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
 .glamecode-head2-input2 {
   border: none;
@@ -3515,9 +3517,148 @@ p {
 .glamecode-head2-button-head {
   text-align: center;
   margin-top: 30px;
-  padding-bottom: 30px;
+  padding-bottom: 50px;
 }
 
 .glamecode-head2-button {
   border: #fff;
+  background: #ff9950;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 3px;
+  color: #fff;
+}
+
+.glamecode-head2-button-pc {
+  border: #fff;
+  background: #ff9950;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 3px;
+  color: #fff;
+  padding: 10px 20px;
+}
+
+/* glamcode-services */
+
+.glamcode-services {
+  background: linear-gradient(
+    71.97deg,
+    #46ffff -2.56%,
+    #f0a066 0.71%,
+    #fffcb2 53.17%,
+    #ff6cf9 106.07%
+  );
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+}
+
+.glamcode-services-heading {
+  text-align: center;
+  padding: 30px 0px;
+}
+
+.glamcode-services-img {
+  width: 80%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-auto-rows: 1fr;
+  margin-top: 30px;
+}
+.glamcode-services-img p {
+  margin-left: 30px;
+}
+
+.glamcode-services-head {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.glamcode-services-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 1fr;
+  margin-top: 30px;
+  width: 80%;
+  margin: auto;
+}
+.glamcode-services-3-p {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.glamcode-services-text {
+  font-size: 25px;
+  font-weight: 600;
+  font-family: "Alata";
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.glamcode-services-text-p {
+  font-size: 16px;
+  font-weight: 500;
+  font-family: "Alata";
+}
+
+.glamcode-services-app {
+  text-align: center !important;
+  margin-top: 40px;
+  padding-bottom: 20px;
+}
+.glamcode-services-app2 {
+  justify-content: center;
+}
+
+.glamcode-services-m-button-all {
+  display: flex;
+  justify-content: space-around;
+  justify-items: center;
+  align-items: center;
+  margin-top: 10px;
+}
+.glamcode-services-m-button1 {
+  background: #fa9191;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  border: none;
+  padding: 4px 15px;
+  color: #fff;
+}
+.glamcode-services-m-button2 {
+  background: #98e2ff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  border: none;
+  padding: 4px 15px;
+  color: #fff;
+}
+.glamcode-services-m-button3 {
+  background: #aa49f7;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  border: none;
+  padding: 4px 15px;
+  color: #fff;
+}
+.glamcode-services-m-button4 {
+  background: #bfffca;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  border: none;
+  padding: 4px 15px;
+  color: #fff;
+}
+
+.glamcode-services-img-m {
+  width: 80%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  margin-top: 30px;
+}
+
+.modal-header {
+  background-color: #e9dcc0 !important;
 }

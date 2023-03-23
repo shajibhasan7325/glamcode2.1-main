@@ -37,7 +37,7 @@ const Mobile = () => {
           </div>
         </div>
       </div>
-      <div>
+      {/* <div>
         <Image src={glame.src} width="80" height="80" />
         <div className="glamecode-head2-input-m-w">
           <div className="glamecode-head2-input-m">
@@ -46,7 +46,7 @@ const Mobile = () => {
             <span className="glamecode-head2-span">LOCATION</span>
           </div>
         </div>
-      </div>
+      </div> */}
     </Fragment>
   );
 };

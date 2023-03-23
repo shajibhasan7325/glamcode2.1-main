@@ -50,7 +50,7 @@ const index = () => {
 
       <div className="glamecode-head2-css">
         <div>
-          <Image src={glame.src} width="80" height="80" />
+          <Image src={glame.src} width="100" height="100" />
         </div>
         <div className="glamecode-head2-input">
           <input type="text" className="glamecode-head2-input2" />
